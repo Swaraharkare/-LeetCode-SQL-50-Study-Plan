@@ -1,48 +1,61 @@
-# 🚀 LeetCode SQL 50 Solutions
+# 🚀 LeetCode SQL 50 Solutions (MS SQL Server)
 
-This repository contains my personal solutions to the **[LeetCode SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/)**, a curated list of high-frequency SQL interview questions.
+This repository contains my personal solutions to the **[LeetCode SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/)** using **Microsoft SQL Server (T-SQL)**.
 
 ---
 
 ## 📊 Progress Tracker
-- [ ] **Select** (5/5) 🟢
-- [ ] **Basic Joins** (9/9) 🟡
-- [ ] **Basic Aggregate Functions** (8/8) 🟠
-- [ ] **Sorting and Grouping** (7/7) 🔵
-- [ ] **Advanced Select and Joins** (7/7) 🟣
-- [ ] **Subqueries** (7/7) 🟤
-- [ ] **Advanced String Functions / Regex / Clause** (7/7) 🟡
+- [x] **Select** (5/5) 🟢
+- [x] **Basic Joins** (9/9) 🟡
+- [x] **Basic Aggregate Functions** (8/8) 🟠
+- [x] **Sorting and Grouping** (7/7) 🔵
+- [x] **Advanced Select and Joins** (7/7) 🟣
+- [x] **Subqueries** (7/7) 🟤
+- [x] **Advanced String Functions / Regex / Clause** (7/7) 🟡
+
+---
+
+## 🛠️ Tech Stack
+- **Database:** MS SQL Server (T-SQL)
+- **Concepts:** Window Functions (`RANK`, `LEAD`), CTEs, Joins, Aggregations.
 
 ---
 
 ## 📁 Repository Structure
-The repository is organized by problem categories for easy navigation:
+Organized by the official [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/) categories:
 - `01_Select/`
 - `02_Basic_Joins/`
 - `03_Basic_Aggregate_Functions/`
 - `04_Sorting_and_Grouping/`
 - `05_Advanced_Select_and_Joins/`
 - `06_Subqueries/`
-- `07_Advanced_String_Functions/Regex/Clause`
+- `07_Advanced_String_Functions_Regex_Clause/`
 
 ---
 
-## 🛠️ Solutions Table
+## 📝 Solutions Table
 
 | # | Problem | Difficulty | Solution | Category |
 |---|---------|------------|----------|----------|
-| 1757 | [Recyclable and Low Fat Products](https://leetcode.com) | 🟢 Easy | [SQL](./01_Select/1757.sql) | Select |
-| 584 | [Find Customer Referee](https://leetcode.com) | 🟢 Easy | [SQL](./01_Select/0584.sql) | Select |
-| 1378 | [Replace Employee ID With The Unique Identifier](https://leetcode.com) | 🟢 Easy | [SQL](./02_Basic_Joins/1378.sql) | Basic Joins |
-| 1661 | [Average Time of Process per Machine](https://leetcode.com) | 🟢 Easy | [SQL](./02_Basic_Joins/1661.sql) | Basic Joins |
-| 1174 | [Immediate Food Delivery II](https://leetcode.com) | 🟡 Medium | [SQL](./03_Basic_Aggregate_Functions/1174.sql) | Aggregate |
+| 1757 | [Recyclable and Low Fat Products](https://leetcode.com) | 🟢 Easy | [T-SQL](./01_Select/1757.sql) | Select |
+| 584 | [Find Customer Referee](https://leetcode.com) | 🟢 Easy | [T-SQL](./01_Select/0584.sql) | Select |
+| 595 | [Big Countries](https://leetcode.com) | 🟢 Easy | [T-SQL](./01_Select/0595.sql) | Select |
+| 1148 | [Article Views I](https://leetcode.com) | 🟢 Easy | [T-SQL](./01_Select/1148.sql) | Select |
+| 1683 | [Invalid Tweets](https://leetcode.com) | 🟢 Easy | [T-SQL](./01_Select/1683.sql) | Select |
+| 1378 | [Replace Employee ID](https://leetcode.com) | 🟢 Easy | [T-SQL](./02_Basic_Joins/1378.sql) | Joins |
+| 1068 | [Product Sales Analysis I](https://leetcode.com) | 🟢 Easy | [T-SQL](./02_Basic_Joins/1068.sql) | Joins |
+| 1581 | [Customer Who Visited but Did Not Buy](https://leetcode.com) | 🟢 Easy | [T-SQL](./02_Basic_Joins/1581.sql) | Joins |
+| 197 | [Rising Temperature](https://leetcode.com) | 🟢 Easy | [T-SQL](./02_Basic_Joins/0197.sql) | Joins |
+| 1661 | [Average Time per Machine](https://leetcode.com) | 🟢 Easy | [T-SQL](./02_Basic_Joins/1661.sql) | Joins |
+
+> *Note: For the full list of 50 problems, refer to the individual folders.*
 
 ---
 
 ## 💡 How to Use
 1. **Clone the Repo**: `git clone https://github.com`
-2. **Navigate**: Open any folder to find the `.sql` solution and problem description.
-3. **Run**: Solutions are compatible with MySQL/PostgreSQL environments used on LeetCode.
+2. **Navigate**: Open any folder to find the `.sql` (T-SQL) solution.
+3. **Run**: These scripts are optimized for **MS SQL Server**. You can test them on the [LeetCode Playground](https://leetcode.com) by selecting **MS SQL Server** as the language.
 
 ---
 
@@ -51,4 +64,4 @@ Feel free to fork this repository, suggest better optimizations via Pull Request
 
 ---
 
-*Happy Coding! 🚀*
+*Happy Querying! 🚀*
