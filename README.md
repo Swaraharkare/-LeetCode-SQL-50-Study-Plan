@@ -23,7 +23,7 @@ The repository is organized by problem categories for easy navigation:
 - `04_Sorting_and_Grouping/`
 - `05_Advanced_Select_and_Joins/`
 - `06_Subqueries/`
-- `07_Advanced_String_Functions/`
+- `07_Advanced_String_Functions/Regex/Clause`
 
 ---
 
