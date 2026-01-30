@@ -1,6 +1,6 @@
 # 🚀 LeetCode SQL 50 Solutions
 
-This repository contains my personal solutions to the **[LeetCode SQL 50 Study Plan](https://leetcode.com)**, a curated list of high-frequency SQL interview questions.
+This repository contains my personal solutions to the **[LeetCode SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/)**, a curated list of high-frequency SQL interview questions.
 
 ---
 
