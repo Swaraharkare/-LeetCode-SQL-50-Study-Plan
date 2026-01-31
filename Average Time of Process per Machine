@@ -1,0 +1,11 @@
+/* Write your T-SQL query statement below */
+
+SELECT DISTINCT A1.machine_id,
+ROUND(AVG(A1.timestamp-A2.timestamp),3) AS processing_time
+FROM Activity AS A1 
+JOIN Activity AS A2
+ON A2.activity_type='start'
+AND A1.activity_type='end'
+WHERE A1.machine_id=A2.machine_id
+GROUP BY A1.machine_id
+ORDER BY processing_time;
