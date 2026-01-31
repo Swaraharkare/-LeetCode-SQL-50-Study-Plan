@@ -1,0 +1,12 @@
+/* Write your T-SQL query statement below */
+
+SELECT customer_id,COUNT(*) AS count_no_trans
+FROM Visits 
+WHERE visit_id NOT IN(
+SELECT V.visit_id
+FROM Visits AS V 
+JOIN Transactions AS T 
+ON V.visit_id=T.visit_id
+WHERE V.visit_id=T.visit_id)
+GROUP BY customer_id
+ORDER BY count_no_trans ASC;
