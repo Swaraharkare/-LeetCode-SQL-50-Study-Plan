@@ -1,0 +1,9 @@
+/* Write your T-SQL query statement below */
+
+SELECT A.user_id,ROUND( CAST(B.total_confirm AS FLOAT)/A.total,2) AS confirmation_rate FROM
+(SELECT S.user_id ,COUNT(*) AS total FROM Signups S
+LEFT JOIN  Confirmations C ON S.user_id=C.user_id GROUP BY S.user_id) AS A
+FULL JOIN
+(SELECT S.user_id,COUNT(C.user_id) AS total_confirm FROM Signups S LEFT JOIN Confirmations C
+ON S.user_id=C.user_id AND action='confirmed'GROUP BY S.user_id) AS B
+ON A.user_id=B.user_id;
