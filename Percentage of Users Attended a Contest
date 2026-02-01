@@ -1,0 +1,9 @@
+/* Write your T-SQL query statement below */
+
+SELECT R.contest_id, ROUND(CAST(COUNT(R.user_id)*100 AS DECIMAL(10,2))/(SELECT COUNT(*) FROM Users),2) AS percentage
+FROM Users U
+RIGHT JOIN 
+Register R 
+ON U.user_id=R.user_id
+GROUP BY R.contest_id
+ORDER BY percentage DESC, contest_id ASC;
