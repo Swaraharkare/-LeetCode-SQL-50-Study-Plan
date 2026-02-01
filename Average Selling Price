@@ -1,0 +1,12 @@
+/* Write your T-SQL query statement below */
+
+WITH Products AS( SELECT P.product_id, 
+          CAST(SUM( U.units*P.price ) AS FLOAT) AS total_Price ,
+          SUM(U.units ) AS total_units FROM Prices P
+          LEFT JOIN UnitsSold U ON P.product_id=U.product_id AND U.purchase_date BETWEEN start_date AND end_date
+          GROUP BY P.product_id)
+
+
+SELECT DISTINCT P.product_id,ISNULL(ROUND((T.total_Price/T.total_units),2),0)AS average_price
+FROM Prices P 
+LEFT JOIN Products T  ON P.product_id = T.product_id;
