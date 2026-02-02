@@ -1,0 +1,10 @@
+WITH first_login AS (
+    SELECT player_id, CAST(MIN(event_date) AS date) AS first_login_date
+    FROM activity
+    GROUP BY player_id)
+    
+SELECT ROUND(COUNT(DISTINCT f.player_id) * 1.0 / (SELECT COUNT(DISTINCT player_id) FROM activity), 2) AS fraction
+FROM first_login f
+INNER JOIN activity a
+  ON a.player_id = f.player_id
+WHERE DATEDIFF(day, f.first_login_date, a.event_date) = 1;
