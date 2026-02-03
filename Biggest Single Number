@@ -1,0 +1,4 @@
+/* Write your T-SQL query statement below */
+
+SELECT TOP 1 (CASE WHEN COUNT(num)=1 THEN num ELSE null END)AS num
+FROM MyNumbers GROUP BY num  ORDER BY num DESC;
