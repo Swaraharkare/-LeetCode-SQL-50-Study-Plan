@@ -1,0 +1,7 @@
+/* Write your T-SQL query statement below */
+WITH CTE AS(
+SELECT sale_id,product_id,year,quantity,price,
+RANK() OVER (PARTITION BY product_id ORDER BY year ) AS rank
+FROM Sales)
+
+SELECT product_id, year as first_year,quantity,price FROM CTE WHERE rank=1;
