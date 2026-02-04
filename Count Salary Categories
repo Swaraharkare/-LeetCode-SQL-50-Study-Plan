@@ -1,0 +1,18 @@
+/* Write your T-SQL query statement below */
+
+WITH C AS (
+    SELECT 'Low Salary' AS category
+    UNION ALL SELECT 'Average Salary'
+    UNION ALL SELECT 'High Salary'
+    )
+
+SELECT C.category, COUNT(A.income) AS accounts_count 
+FROM C
+LEFT JOIN Accounts A
+ON C.category=
+    CASE 
+    WHEN A.income<20000 THEN 'Low Salary'
+    WHEN A.income BETWEEN 20000 AND 50000 THEN 'Average Salary'
+    ELSE 'High Salary'
+    END
+GROUP BY C.category;
