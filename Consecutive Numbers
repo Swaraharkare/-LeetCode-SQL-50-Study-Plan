@@ -1,0 +1,16 @@
+/* Write your T-SQL query statement below */
+WITH CTE AS(
+SELECT id,num, 
+LAG(num) OVER (ORDER BY id) AS prev_num,
+LEAD(num) OVER (ORDER BY id) AS next_num
+FROM Logs),
+
+Second_CTE AS (
+SELECT num,COUNT(num) AS total_num
+FROM CTE
+GROUP BY num)
+
+SELECT DISTINCT C.num AS ConsecutiveNums FROM CTE C 
+LEFT JOIN Second_CTE S
+ON C.num=S.num
+WHERE C.num =C.prev_num AND C.num = C.next_num AND S.total_num >=3
