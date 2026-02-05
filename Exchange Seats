@@ -1,0 +1,13 @@
+/* Write your T-SQL query statement below */
+WITH CTE AS(
+SELECT id,student,LAG(student) OVER(ORDER BY id) AS prev_stud,
+LEAD(student) OVER(ORDER BY id) AS next_stud
+FROM Seat)
+
+SELECT id,
+CASE 
+    WHEN id%2=1 AND next_stud IS NOT NULL THEN next_stud
+    WHEN id%2=0 THEN prev_stud
+    ELSE student
+END student
+FROM CTE;
