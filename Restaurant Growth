@@ -1,0 +1,14 @@
+/* Write your T-SQL query statement below */
+with a as(
+select distinct visited_on as min_date, dateadd(day, 6, visited_on) max_date
+from customer
+where dateadd(day, 6, visited_on) in (select visited_on from customer))
+
+SELECT max_date as visited_on, 
+sum(c.amount) as amount, 
+round((sum(c.amount) * 1.0) / 7, 2) as average_amount
+from customer c
+inner join a
+on c.visited_on >= min_date
+and c.visited_on <= max_date
+group by max_date;
