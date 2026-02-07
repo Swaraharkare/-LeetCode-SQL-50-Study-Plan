@@ -1,0 +1,9 @@
+/* Write your T-SQL query statement below */
+
+WITH CTE AS (
+    SELECT *, 
+           RANK() OVER (PARTITION BY email ORDER BY id ASC) AS rnk
+    FROM Person
+)
+DELETE FROM CTE WHERE rnk > 1;
+
