@@ -1,0 +1,10 @@
+/* Write your T-SQL query statement below */
+
+SELECT P.product_name AS product_name ,SUM(O.unit) AS unit     
+FROM Products AS P
+LEFT JOIN Orders AS O
+ON P.product_id  = O.product_id 
+WHERE FORMAT(order_date,'yyyy-MM' )='2020-02'
+GROUP BY P.product_name
+HAVING SUM(O.unit) >= 100 ;
+
