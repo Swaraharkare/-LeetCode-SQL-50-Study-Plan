@@ -18,18 +18,6 @@ This repository contains my personal solutions to the **[LeetCode SQL 50 Study P
 ## 🛠️ Tech Stack
 - **Database Engine:** MS SQL Server (T-SQL)
 - **Key Concepts:** Window Functions (`DENSE_RANK`, `ROW_NUMBER`), CTEs, `CROSS APPLY`, and T-SQL Date Manipulation.
-
----
-
-## 📁 Repository Structure
-- `01_Select/`
-- `02_Basic_Joins/`
-- `03_Basic_Aggregate_Functions/`
-- `04_Sorting_and_Grouping/`
-- `05_Advanced_Select_and_Joins/`
-- `06_Subqueries/`
-- `07_Advanced_String_Functions_Regex_Clause/`
-
 ---
 
 ## 📝 Problem Index
