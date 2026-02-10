@@ -89,11 +89,5 @@ This repository contains my personal solutions to the **[LeetCode SQL 50 Study P
 
 ---
 
-## 💡 How to Use
-1. **Clone the Repo**: `git clone https://github.com`
-2. **Navigate**: Folders are ordered 01-07 to follow the study plan.
-3. **Execution**: Solutions are verified using the **MS SQL Server** engine on LeetCode.
-
----
 
 *Happy Querying! 🚀*
